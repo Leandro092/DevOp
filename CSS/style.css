@@ -17,6 +17,26 @@ html {
   color: #FFFFFF;
 }
 
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 .main-wrap {
   position: relative;
   height: 100vh;
@@ -61,7 +81,7 @@ html {
   right: 0;
   transform: translateX(50%);
   font-family: "K2D - Medium";
-  font-size: 45px;
+  font-size: 40px;
 }
 .main-wrap .home-header .top-header .navList {
   display: flex;
@@ -121,6 +141,7 @@ html {
 .main-wrap .home-header .main-header .scrollDown .ctnIcon {
   width: 25px;
   height: 25px;
+  animation: arrowBounce 2s infinite alternate;
 }
 .main-wrap .home-header .main-header .scrollDown .ctnIcon img {
   width: 100%;
@@ -130,10 +151,12 @@ html {
 }
 .main-wrap .home-header .info-header {
   position: absolute;
+  z-index: 10;
   bottom: 10%;
-  left: 5%;
+  left: 0;
+  transform: translateX(15%);
   font-size: 80px;
-  width: 500px;
+  width: auto;
 }
 .main-wrap .home-header .info-header .notnoise {
   transform: translateX(60px);
@@ -148,4 +171,17 @@ html {
   transform: translate(10%, 30%);
   color: rgba(255, 255, 255, 0.1098039216);
   font-size: 360px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 20;
+}
+
+@keyframes arrowBounce {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
 }/*# sourceMappingURL=style.css.map */

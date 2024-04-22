@@ -70,7 +70,7 @@ html{
                     right: 0;
                     transform: translateX(50%);
                     font-family: $mediumFontFamily;
-                    font-size: 45px;
+                    font-size: 40px;
                 }
             }
             .navList{
@@ -133,6 +133,7 @@ html{
                 .ctnIcon{
                     width: 25px;
                     height: 25px;
+                    animation: arrowBounce 2s infinite alternate;
                     img{
                         width: 100%;
                         height: 100%;
@@ -143,10 +144,12 @@ html{
         }
         .info-header{
             position: absolute;
+            z-index: 10;
             bottom: 10%;
-            left: 5%;
+            left: 0;
+            transform: translateX(15%);
             font-size: 80px;
-            width: 500px;
+            width: auto;
             .notnoise{
                 transform: translateX(60px);
                 .not{
@@ -161,6 +164,18 @@ html{
             transform: translate(10%, 30%);
             color: $tdTxtColor;
             font-size: 360px;
+            user-select: none;
+            z-index: 20;
         }
+    }
+}
+
+@keyframes arrowBounce {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(3px);
+    
     }
 }
