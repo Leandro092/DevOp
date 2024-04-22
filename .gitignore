@@ -37,6 +37,6 @@
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 #JSON files
-SETTINGS/*.json
+JSON/*.json
 
 node_modules/*
